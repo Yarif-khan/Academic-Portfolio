@@ -4,9 +4,9 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function Contact() {
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-4xl font-bold mb-6">Contact Me</h1>
-      <p className="text-xl mb-6">
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-8">Contact Me</h1>
+      <p className="text-base sm:text-xl mb-6">
         I'm always open to collaborations, discussions, or questions about my research. Feel free to reach out using the
         form below or connect with me on social media.
       </p>
@@ -27,11 +27,12 @@ export default function Contact() {
           <label htmlFor="message" className="text-sm font-medium">
             Message
           </label>
-          <Textarea id="message" placeholder="Your message" />
+          <Textarea id="message" placeholder="Your message" className="min-h-[150px]" />
         </div>
-        <Button type="submit">Send Message</Button>
+        <Button type="submit" className="w-full sm:w-auto">
+          Send Message
+        </Button>
       </form>
     </div>
   )
 }
-
