@@ -2,6 +2,13 @@ import { ResearchArticle } from "@/components/research-article"
 
 const articles = [
   {
+    title: "The Ultimate Guide to Selecting a Vector in Molecular Biology & Genetic Engineering",
+    category: "Molecular Biology",
+    summary:
+      "A comprehensive framework for navigating vector selection in molecular biology experiments, covering core considerations, essential components, specialized vector types, and practical decision-making workflows.",
+    link: "/research/vector-selection-guide",
+  },
+  {
     title: "Detailed Analysis of fMet Cleavage by CNBr in Recombinant Insulin Production and Alternative Strategies",
     category: "Bioprocess Engineering",
     summary:

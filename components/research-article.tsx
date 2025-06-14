@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Dna, Brain, Cog } from "lucide-react"
+import { ArrowRight, Dna, Brain, Cog, FlaskConical } from "lucide-react"
 
 interface ResearchArticleProps {
   title: string
@@ -17,6 +17,8 @@ const getCategoryIcon = (category: string) => {
       return Brain
     case "Bioprocess Engineering":
       return Cog
+    case "Molecular Biology":
+      return FlaskConical
     default:
       return Dna
   }
@@ -44,6 +46,13 @@ const getCategoryColors = (category: string) => {
         border: "border-purple-200/60 dark:border-purple-800/60",
         text: "text-purple-700 dark:text-purple-300",
         icon: "text-purple-600 dark:text-purple-400",
+      }
+    case "Molecular Biology":
+      return {
+        bg: "bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950/30 dark:to-amber-950/30",
+        border: "border-orange-200/60 dark:border-orange-800/60",
+        text: "text-orange-700 dark:text-orange-300",
+        icon: "text-orange-600 dark:text-orange-400",
       }
     default:
       return {
