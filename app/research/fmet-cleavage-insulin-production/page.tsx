@@ -33,13 +33,6 @@ export default function FMetCleavageInsulinProduction() {
                 </strong>{" "}
                 - Bioresources and Bioprocessing
               </p>
-              <p className="text-blue-700 dark:text-blue-300 mb-4 leading-relaxed">
-                The Global Diabetes Compact was launched by the World Health Organization in April 2021 with one of its
-                important goals to increase the accessibility and affordability of life-saving medicine—insulin. The
-                rising prevalence of diabetes worldwide is bound to escalate the demand for recombinant insulin
-                therapeutics. Currently, the majority of recombinant insulin therapeutics are produced from E. coli
-                inclusion bodies. Here, a comprehensive review of downstream processing...
-              </p>
               <a
                 href="https://doi.org/10.1186/s40643-021-00419-w"
                 className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 font-medium underline decoration-2 underline-offset-2"
