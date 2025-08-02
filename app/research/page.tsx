@@ -2,6 +2,13 @@ import { ResearchArticle } from "@/components/research-article"
 
 const articles = [
   {
+    title: "The Accidental Amplifier: How PCR’s Greatest Strength Wasn’t Its Original Goal",
+    category: "Molecular Biology",
+    summary:
+      "Explored the problems faced by researchers and their motivation that led to the invention of PCR - An indespensible tool in modern diagnostics.",
+    link: "/research/pcr-invention",
+  },
+  {
     title: "The Ultimate Guide to Selecting a Vector in Molecular Biology & Genetic Engineering",
     category: "Molecular Biology",
     summary:
