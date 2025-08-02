@@ -19,8 +19,9 @@ export default function PCROriginBlog() {
           Machine Learning in Protein Structure Prediction
         </h1>
         <p className="text-lg text-muted-foreground mb-6">
-          Working on it!
+          Exploring the role of AI and machine learning algorithms in predicting protein structures and their implications for drug discovery.
         </p>
+        <p><strong>Working on it!</strong></p>
       </header>
     </div>
   );
