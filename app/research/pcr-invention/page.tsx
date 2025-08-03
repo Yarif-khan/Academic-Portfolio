@@ -87,7 +87,7 @@ export default function PCROriginBlog() {
             </blockquote>
           </div>
         </div>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground mb-4">
           The irony? He didn't set out to build a DNA photocopier. He just wanted to make{" "}
           <strong>mutations easier to detect</strong>.
         </p>
