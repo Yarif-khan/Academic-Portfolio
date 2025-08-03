@@ -23,19 +23,31 @@ export default function PCROriginBlog() {
           Kary Mullis didn't set out to copy DNA. He just wanted to <strong>see</strong> it clearly. Here's why that
           distinction changed biology forever.
         </p>
-        <p>
-          Picture this: It's 1983. You're hunting for a single misspelled word hidden in a library containing three
-          billion books. Your tools? A flickering flashlight and a magnifying glass. That was the reality for molecular
-          biologists searching for mutations inside the human genome. At <strong>Cetus Corporation</strong>, one
-          researcher—<strong>Kary Mullis</strong>—was trying to pinpoint a single genetic change in the β-globin gene
-          that causes <strong>sickle-cell anemia</strong>.
-        </p>
-        <p>
-          The problem wasn't finding the location of this mutation—scientists already knew where to look. The problem
-          was <strong>seeing it at all</strong>. Hybridization assays and blotting techniques offered faint signals,
-          easily drowned out by the immense complexity of the genome.
-        </p>
       </header>
+
+      {/* Picture This Section */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 border-b-2 border-primary pb-2">
+          <Settings className="h-6 w-6 text-primary" />
+          Picture This!...
+        </h2>
+        <p className="text-muted-foreground mb-4">
+          It's 1983. You're hunting for a single misspelled word hidden in a library containing three billion books.
+        </p>
+        <p className="text-muted-foreground mb-4">Your tools? A flickering flashlight and a magnifying glass.</p>
+        <p className="text-muted-foreground mb-4">
+          That was the reality for molecular biologists searching for mutations inside the human genome. At{" "}
+          <strong>Cetus Corporation</strong>, a biotech firm in California, one researcher—<strong>Kary Mullis</strong>
+          —was trying to pinpoint a single genetic change in the β-globin gene that causes{" "}
+          <strong>sickle-cell anemia</strong>. The problem wasn't finding the location of this mutation—scientists
+          already knew where to look. The problem was <strong>seeing it at all</strong>. Hybridization assays and
+          blotting techniques offered faint signals, easily drowned out by the immense complexity of the genome.
+        </p>
+        <p className="text-muted-foreground mb-4">
+          Mullis's solution would change biology forever. Ironically, it wasn't about copying DNA at first. It was about
+          making DNA <strong>visible</strong>.
+        </p>
+      </section>
 
       {/* Problem Section */}
       <section className="mb-12">
@@ -43,6 +55,15 @@ export default function PCROriginBlog() {
           <Settings className="h-6 w-6 text-primary" />
           The Problem: Detection, Not Duplication
         </h2>
+        <p className="text-muted-foreground">
+          In the early 1980s, genetic diagnostics were tedious. Detecting a single nucleotide change required
+        </p>
+        <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+          <li>extracting large amounts of DNA, </li>
+          <li>cutting it into fragments, </li>
+          <li>running gels, </li>
+          <li>transferring to membranes (Southern blotting), and probing with labeled oligonucleotides. </li>
+        </ul>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Kary Mullis Image */}
           <div className="w-48 h-48 relative rounded-lg overflow-hidden shadow-lg">
@@ -56,21 +77,20 @@ export default function PCROriginBlog() {
           </div>
           <div className="flex-1">
             <p className="text-muted-foreground mb-4">
-              In the early 1980s, genetic diagnostics were tedious. Detecting a single nucleotide change required
-              extracting large amounts of DNA, cutting it into fragments, running gels, transferring to membranes
-              (Southern blotting), and probing with labeled oligonucleotides. This process was slow, expensive, and
-              often inconclusive.
+              This process was slow, expensive, and often inconclusive. The signals from hybridization were like trying
+              to hear a whisper in a crowded stadium!
             </p>
+            <p className="text-muted-foreground mb-4">Mullis summarized the frustration in his Nobel Lecture:</p>
             <blockquote className="border-l-4 pl-4 italic mb-4">
               "What I needed was some method of <strong>raising the relative concentration</strong> of the specific site
               of interest. What I needed was PCR." – Kary Mullis, Nobel Lecture
             </blockquote>
-            <p>
-              The irony? He didn't set out to build a DNA photocopier. He just wanted to make{" "}
-              <strong>mutations easier to detect</strong>.
-            </p>
           </div>
         </div>
+        <p className="text-muted-foreground">
+          The irony? He didn't set out to build a DNA photocopier. He just wanted to make{" "}
+          <strong>mutations easier to detect</strong>.
+        </p>
       </section>
 
       {/* Existing Tools Section */}
@@ -104,7 +124,7 @@ export default function PCROriginBlog() {
           double the number of target sequences: 1 → 2 → 4 → 8… after 30 cycles, over <strong>a billion copies</strong>{" "}
           of the desired DNA fragment would exist.
         </p>
-        <p>
+        <p className="text-muted-foreground mb-4">
           The target sequence, once almost invisible, would now flood the tube. Detection wouldn't require radioactive
           tricks or weeks of blots—the sequence would practically announce itself.
         </p>
