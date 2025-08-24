@@ -112,9 +112,9 @@ export default function Home() {
           <h2 className="text-2xl font-semibold">Research Focus</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {[
-              { title: "Genetic Engineering", icon: Dna },
+              { title: "Molecular Biology", icon: Dna },
               { title: "Computational Biology", icon: Brain },
-              { title: "Cell Biology", icon: Flask },
+              { title: "Biochemistry", icon: Flask },
               { title: "Bioprocess Engineering", icon: Cog },
               { title: "Analytical Methods", icon: Microscope },
             ].map((item, index) => (
