@@ -1,4 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 const courseCategories = [
   {
@@ -98,24 +101,51 @@ export default function Courses() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-3xl sm:text-4xl font-bold mb-8">Key Coursework</h1>
 
-      {courseCategories.map((category) => (
-        <div key={category.name} className="mb-10">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4">{category.name}</h2>
-          <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
-            {category.courses.map((course) => (
-              <Card key={course.code}>
-                <CardHeader>
-                  <CardTitle className="text-lg sm:text-xl">{course.name}</CardTitle>
-                  <p className="text-sm text-muted-foreground">{course.code}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm sm:text-base">{course.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+      <div className="mb-12">
+        {courseCategories.map((category) => (
+          <div key={category.name} className="mb-10">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4">{category.name}</h2>
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+              {category.courses.map((course) => (
+                <Card key={course.code}>
+                  <CardHeader>
+                    <CardTitle className="text-lg sm:text-xl">{course.name}</CardTitle>
+                    <p className="text-sm text-muted-foreground">{course.code}</p>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm sm:text-base">{course.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
+        ))}
+      </div>
+
+      {/* Connect Section */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-semibold">Connect</h2>
+        <div className="flex flex-wrap gap-4">
+          <Button asChild variant="outline" className="gap-2 bg-transparent">
+            <Link href="https://github.com/Yarif-khan">
+              <Github className="h-4 w-4" />
+              GitHub
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="gap-2 bg-transparent">
+            <Link href="https://linkedin.com/in/yarif-uddin-khan">
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="gap-2 bg-transparent">
+            <Link href="/contact">
+              <Mail className="h-4 w-4" />
+              Contact
+            </Link>
+          </Button>
         </div>
-      ))}
+      </div>
     </div>
   )
 }

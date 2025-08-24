@@ -1,8 +1,11 @@
 import { ResearchArticle } from "@/components/research-article"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 const articles = [
   {
-    title: "The Accidental Amplifier: How PCR’s Greatest Strength Wasn’t Its Original Goal",
+    title: "The Accidental Amplifier: How PCR's Greatest Strength Wasn't Its Original Goal",
     category: "Molecular Biology",
     summary:
       "Explored the problems faced by researchers and their motivation that led to the invention of PCR - An indespensible tool in modern diagnostics.",
@@ -48,10 +51,35 @@ export default function Research() {
         </p>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-8 mb-12">
         {articles.map((article, index) => (
           <ResearchArticle key={index} {...article} />
         ))}
+      </div>
+
+      {/* Connect Section */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-semibold">Connect</h2>
+        <div className="flex flex-wrap gap-4">
+          <Button asChild variant="outline" className="gap-2 bg-transparent">
+            <Link href="https://github.com/Yarif-khan">
+              <Github className="h-4 w-4" />
+              GitHub
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="gap-2 bg-transparent">
+            <Link href="https://linkedin.com/in/yarif-uddin-khan">
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="gap-2 bg-transparent">
+            <Link href="/contact">
+              <Mail className="h-4 w-4" />
+              Contact
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   )
