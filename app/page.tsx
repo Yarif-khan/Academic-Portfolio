@@ -84,8 +84,8 @@ export default function Home() {
             <h2 className="text-2xl font-semibold">Education</h2>
             <div className="space-y-4">
               <div className="border-l-2 border-primary pl-4">
-                <h4 className="font-medium">BS Biotechnology</h4>
-                <p className="text-muted-foreground">Sir Syed University of Engineering and Technology</p>
+                <h4 className="font-medium">Bachelors of Science in Biotechnology</h4>
+                <p className="text-muted-foreground">Dow College of Biotechnology (DCoB) - DUHS</p>
                 <p className="text-sm text-muted-foreground">2023 - Present</p>
               </div>
               <div className="border-l-2 border-primary pl-4">
