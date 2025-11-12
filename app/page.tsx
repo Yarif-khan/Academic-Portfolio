@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, FileText, Dna, Brain, FlaskRoundIcon as Flask, Cog, Microscope } from "lucide-react"
+import { Github, Linkedin, Mail, FileText, Dna, Brain, Flag as Flask, Cog, Microscope } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
@@ -18,7 +18,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ashraful-islam-pRt3JVYlJho-unsplash.jpg-c2si3bPOLHqBC4gOSWpLyqDieRCLNr.jpeg"
+            src="/images/design-mode/ashraful-islam-pRt3JVYlJho-unsplash.jpg.jpeg"
             alt="DNA Structure"
             fill
             className="object-cover object-center"
@@ -102,12 +102,74 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Research Focus Section */}
+        {/* Current Endeavors Section */}
         <motion.div
           className="space-y-6 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-semibold">Current Endeavors</h2>
+            <Link href="/current" className="text-primary hover:underline text-sm font-medium">
+              View All →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Data Engineering with Python",
+                platform: "DataCamp",
+                progress: 65,
+                skills: ["Python", "SQL", "Data Pipeline"],
+              },
+              {
+                title: "Machine Learning for Scientists",
+                platform: "DataCamp",
+                progress: 40,
+                skills: ["Machine Learning", "Python", "Scikit-learn"],
+              },
+            ].map((activity, index) => (
+              <motion.div
+                key={activity.title}
+                className="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.65 + index * 0.1 }}
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <h4 className="font-medium">{activity.title}</h4>
+                    <p className="text-xs text-muted-foreground">{activity.platform}</p>
+                  </div>
+                  <span className="text-xs bg-primary text-primary-foreground px-2 py-1 rounded">
+                    {activity.progress}%
+                  </span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-1.5 mb-3">
+                  <div className="bg-primary h-1.5 rounded-full" style={{ width: `${activity.progress}%` }} />
+                </div>
+                <div className="flex flex-wrap gap-1">
+                  {activity.skills.slice(0, 2).map((skill) => (
+                    <span key={skill} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">
+                      {skill}
+                    </span>
+                  ))}
+                  {activity.skills.length > 2 && (
+                    <span className="text-xs text-muted-foreground px-2 py-1">+{activity.skills.length - 2}</span>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Research Focus Section */}
+        <motion.div
+          className="space-y-6 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
         >
           <h2 className="text-2xl font-semibold">Research Focus</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -141,19 +203,19 @@ export default function Home() {
         >
           <h2 className="text-2xl font-semibold">Connect</h2>
           <div className="flex flex-wrap gap-4">
-            <Button asChild variant="outline" className="gap-2">
+            <Button asChild variant="outline" className="gap-2 bg-transparent">
               <Link href="https://github.com/Yarif-khan">
                 <Github className="h-4 w-4" />
                 GitHub
               </Link>
             </Button>
-            <Button asChild variant="outline" className="gap-2">
+            <Button asChild variant="outline" className="gap-2 bg-transparent">
               <Link href="https://linkedin.com/in/yarif-uddin-khan">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
               </Link>
             </Button>
-            <Button asChild variant="outline" className="gap-2">
+            <Button asChild variant="outline" className="gap-2 bg-transparent">
               <Link href="/contact">
                 <Mail className="h-4 w-4" />
                 Contact

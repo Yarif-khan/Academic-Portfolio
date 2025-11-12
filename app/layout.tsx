@@ -35,6 +35,7 @@ export default function RootLayout({
                 <div className="hidden sm:flex items-center gap-2">
                   <NavLink href="/">Home</NavLink>
                   <NavLink href="/research">Research</NavLink>
+                  <NavLink href="/current">Current</NavLink>
                   <NavLink href="/courses">Courses</NavLink>
                   <NavLink href="/contact">Contact</NavLink>
                   <ModeToggle />
@@ -52,6 +53,7 @@ export default function RootLayout({
                       <div className="flex flex-col gap-4 mt-8">
                         <NavLink href="/">Home</NavLink>
                         <NavLink href="/research">Research</NavLink>
+                        <NavLink href="/current">Current</NavLink>
                         <NavLink href="/courses">Courses</NavLink>
                         <NavLink href="/contact">Contact</NavLink>
                       </div>

@@ -75,6 +75,11 @@ export function MainNav() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <Link href="/current" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Current</NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
           </Link>
