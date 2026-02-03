@@ -66,7 +66,7 @@ export default function Home() {
                 variant="default"
                 className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
               >
-                <Link href="/cv.pdf">
+                <Link href="https://drive.google.com/file/d/1bdxzJSkDZsS7WL2H7gHseHs-ozntu6lF/view?usp=sharing">
                   <FileText className="h-4 w-4" />
                   Download CV
                 </Link>
